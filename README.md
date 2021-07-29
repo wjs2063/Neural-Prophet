@@ -42,11 +42,11 @@ model_23 = NeuralProphet(seasonality_mode='additive',yearly_seasonality=True,
                     ar_sparsity=0.5
                         
                     )
-model_23.add_seasonality("first",period=24,fourier_order=24) #24시간
+model_23.add_seasonality("first",period=24,fourier_order=24) 
 model_23.add_seasonality("second",period=36,fourier_order=48)
 model_23.add_seasonality("third",period=72,fourier_order=96)
-#model_23.add_seasonality("fourth",period=24,fourier_order=20)# 3개월 기준
-#model_23.add_seasonality("fifth",period=24*30.5,fourier_order=6,) 
+#model_23.add_seasonality("fourth",period=24,fourier_order=20)
+#model_23.add_seasonality("fifth",period=24*30.5,fourier_order=6) 
 #model_23.add_future_regressor('y1',normalize=True)
 model_23.add_future_regressor('y1')
 model_23.add_future_regressor('y2')
@@ -74,6 +74,7 @@ seasonality mode 는 additive 와 multiplicative 둘중 하나를 선택하면�
 그리고 데이터분석으로 yearly,weekly,daily seasonal 이 있는지 확인하고 해당 계절성을 적용해준다
 change points 는 데이터에서 change 포인트를 지정해준다. default 값은 5이다 
 ar_sparsity 0과1사이의 값을 주면되는데 0은 희소성을 주게되고 1은 정규화를 주지않는다
+freq 알맞게 설정해주면된다. 필자는 Hour 기준이였으므로 H 로설정했다.
 
 그리고 regressor 추가할때 주의해야 할점
 
