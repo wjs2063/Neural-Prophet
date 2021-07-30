@@ -92,6 +92,3 @@ make_future_dataframe 을 보면 regressor 데이터를 넣어주어야한다. �
 
 그리고 예측하면 된다.
 
-누군가에게 도움이됐으면
-
-
