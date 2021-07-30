@@ -69,12 +69,12 @@ fig, ax = plt.subplots(figsize=(4, 2))
 
 ```
 
-해당코드를 설명하자면 태양광 발전예측에 사용한 코드인데 
+해당코드를 설명하자면
 seasonality mode 는 additive 와 multiplicative 둘중 하나를 선택하면된다.
 그리고 데이터분석으로 yearly,weekly,daily seasonal 이 있는지 확인하고 해당 계절성을 적용해준다
 change points 는 데이터에서 change 포인트를 지정해준다. default 값은 5이다 
 ar_sparsity 0과1사이의 값을 주면되는데 0은 희소성을 주게되고 1은 정규화를 주지않는다
-freq 알맞게 설정해주면된다. 필자는 Hour 기준이였으므로 H 로설정했다.
+freq 알맞게 설정해주면된다. 나는 Hour 기준이였으므로 H 로설정했다.
 
 그리고 regressor 추가할때 주의해야 할점
 
